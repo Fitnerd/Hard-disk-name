@@ -24,8 +24,8 @@ int main (int argc, const char* argv[]) {
   while (std::getline(ss, line, '\n')) {
     if ((pos = line.find("sd")) != std::string::npos || (pos = line.find("hd")) != std::string::npos) {
       dev_name = line.substr(pos, (line.length() - 1));
-      if (dev_name.length() != 4) {
-        std::cerr << dev_name << '\n';
+      if (dev_name.length() == 3) {
+        std::cerr << dev_name << '\n'; // do what you want with device name
       }
     }
   }
